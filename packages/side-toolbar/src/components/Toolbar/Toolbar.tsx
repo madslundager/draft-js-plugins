@@ -118,8 +118,7 @@ export default function Toolbar({
       >
         <div
           ref={setButtonReferenceElement}
-          onMouseEnter={() => setShow(true)}
-          onMouseLeave={() => setShow(false)}
+          onClick={() => setShow((prevState) => {!prevState})}
         >
           <SideToolbarButton
             className={theme.blockTypeSelectStyles?.blockType}
